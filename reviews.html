@@ -5,11 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-image: url("https://www.ctvnews.ca/polopoly_fs/1.4780511.1579803519!/httpImage/image.png_gen/derivatives/landscape_620/image.png");
+        background-attachment: fixed;
+        background-size: 100%, 100%
+        }
+   </style>
   </head>
 
-  <body class="bg-secondary min-vh-100 d-flex flex-column">
+  <body class="min-vh-100 d-flex flex-column">
+ 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: darkred;">
       <div class="container-xxl">
         <!-- navbar brand / title -->
         <a class="navbar-brand" href="index.html">
@@ -43,9 +51,9 @@
     <section id="reviews">
       <div class="container-fluid bg-light">
         <div class="row">
-          <div class ="col-lg-6 pb-5">
-            <img src="crx.png" alt="crx" class="src" width="500" height="500">
-            <div class="pb-5 text-center">
+          <div class ="col-lg-6 text-center">
+            <img src="https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/image_pour_le_caroussel.jpg" alt="crx" class="rounded src m-5" width="400" height="400">
+            <div class="pb-2 text-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
               </svg>
@@ -64,7 +72,7 @@
             </div>
 
             <!--info table-->
-            <div class="text-center">
+            <div class="text-center pb-4">
               <table class="table">
                 <tbody>
                   <tr>
@@ -86,10 +94,10 @@
             </div>
 
             <!--Add review button-->
-            <p class="text-center">
-              <a href="addreview.html" class="btn btn-danger rounded-pill">Add a review</a>
+            <p class="text-center pb-2 m-1">
+              <a href="addreview.html" class="btn m-5" style="background-color: darkred; color:white;">Add a review</a>
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn m-5"style="background-color: darkred; color:white; data-bs-toggle="modal" data-bs-target="#exampleModal">
                 More information
               </button>
 
@@ -110,9 +118,9 @@
                 </div>
               </div>          </div>
           <div class="col-lg-6">
-            <h2 class="fw-bold py-3">Customer Reviews</h2>
-            <div class="row py-4">
-              <div class="col-md-6">
+            <h2 class="fw-bold py-3">Reviews</h2>
+            <div class="row">
+              <div class="col-md-11">
                 <h5>John Doe</h5>
                 <div class="pb-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -139,7 +147,7 @@
           <hr class="my-2">
 
         <div class="row py-4">
-          <div class="col-md-6">
+          <div class="col-md-11">
             <h5>Jane Li</h5>
             <div class="pb-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -176,30 +184,19 @@
       <div class="container-xxl my-5 p-5 bg-light">
         <div class="row">
           <div class="col-lg-8">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.352156309418!2d-75.68664268469102!3d45.42240204425287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0507c6d4942b%3A0x822f56e12a53717!2suOttawa!5e0!3m2!1sen!2sca!4v1654652699833!5m2!1sen!2sca" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11201.519913895783!2d-75.69039506400539!3d45.421841126408395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0553301ba91f%3A0x88fbccabd3b90bc4!2sLearning%20Crossroads%20(CRX)!5e0!3m2!1sen!2sca!4v1676149901443!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="col-lg-4">
             <div>
-              <h2>Contact Info</h2>
-              <p>75 Laurier Ave. E, Ottawa, ON K1N 6N5</p>
-              <p>
-                <a href="tel:+1-613-555-5555">613-555-5555</a>
-              </p>
-              <p>
-                <a href="mailto:RMSS@uottawa.com">RMSS@uottawa.com</a>
-              </p>
-            </div>
             <div class="opening-hours">
               <h3 class="mt-4">Opening Hours</h3>
               <div class="row">
                 <div class="col-6">
-                  <p><span class="fw-bold">Monday - Friday:</span></p>
-                  <p><span class="fw-bold">Weekends and Holidays:</span></p>
+                  <p><span class="fw-bold"><br>Monday - Sunday:</span></p>
                 </div>
                 <div class="col-6">
-                  <p>9:00am - 5:00pm</p>
-                  <p>9:00am - 2:00pm</p>
+                  <p><br>7:00am - 11:00pm</p>
                 </div>
               </div>   
             </div>
@@ -207,11 +204,6 @@
         </div>
       </div>
     </section>
-
-    <footer class="bg-dark mt-auto">
-      <p class="text-light text-end p-2">RMSSn</p>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
