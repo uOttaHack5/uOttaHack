@@ -39,6 +39,7 @@
     </nav>
 
     <section id="home">
+      <br></br>
       <div class="container-fluid bg-light" id="background-container">
         <h2 class="text-center fw-bold">Add Review</h2>
         <form id="reviewDetails">
@@ -55,6 +56,24 @@
               <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
               <label for="comments" class="ps-4">Description</label>
             </div>
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <div class="col-md-6">
+              <label for="stars">Rating</label>
+            </div>
+
+            <div class = "container-fluid" id="stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+
+          <br> </br>
+
+    
             <div class="mb-4">
               <a href="confirmation.html" onclick="document.getElementById('reviewDetails').submit();" class="btn btn-danger">
                 Submit </a>
