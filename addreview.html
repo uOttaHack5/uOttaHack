@@ -38,17 +38,27 @@
       </div>
     </nav>
 
+
     <section id="home">
       <br></br>
+
+      <style>
+        body {
+          background-image: url("https://www.ctvnews.ca/polopoly_fs/1.4780511.1579803519!/httpImage/image.png_gen/derivatives/landscape_620/image.png");
+          background-attachment: fixed;
+          background-size: 110%, 100%
+          }
+     </style>
+
       <div class="container-fluid bg-light" id="background-container">
         <h2 class="text-center fw-bold">Add Review</h2>
         <form id="reviewDetails">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 bg-light text-dark">
               <label for="buildingName">Building Name</label>
               <input type="text" class="form-control" id="buildingName" placeholder="Enter the Building Name">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 bg-light text-dark">
               <label for="floorNumber">Floor Number</label>
               <input type="text" class="form-control" id="floorNumber" placeholder="Enter the Floor Number">
             </div>
@@ -59,7 +69,7 @@
             
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <div class="col-md-6">
+            <div class="col-md-6 bg-light text-dark">
               <label for="stars">Rating</label>
             </div>
 
@@ -71,6 +81,12 @@
             <span class="fa fa-star"></span>
           </div>
 
+          <style>
+            .checked {
+              color: orange;
+            }
+            </style>
+
           <br> </br>
 
     
@@ -80,6 +96,7 @@
             </div>
           </div>
         </form>
+        
         
       </div>
     </section>
