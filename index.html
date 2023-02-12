@@ -51,12 +51,18 @@
         <div class="row">
           <div class="bg-light p-5">
             <h3 class="text-center fw-bold">Let's get started!<br>Enter the building name and code room</h3>
-            <div class="input-group rounded p-4">
-              <input type="search" class="form-control rounded" placeholder="Building name" aria-label="Search" aria-describedby="search-addon" />
-              <input type="search" class="form-control rounded" placeholder="Code Room" aria-label="Search" aria-describedby="search-addon" />
+            <div class="input-group rounded">
+              <input type="search" id="buildingName" class="form-control rounded" placeholder="Building name" aria-label="buidingName" aria-describedby="search-addon" />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
+              <input type="search" id="floorNumber" class="form-control rounded" placeholder="Code Room" aria-label="floorNumber" aria-describedby="search-addon" />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
             </div>
             <p class="text-center">
-              <a href="reviews.html" class="btn btn-danger rounded-pill" style="background-color:darkred;">Search</a>
+              <button onclick="search()" class="btn btn-danger rounded-pill">Search</button>
             </p>
             <h6 class="text-center">
               Use our amazing search website to find your perfect study location in University of Ottawa rated by your peers!</h6>
@@ -68,5 +74,16 @@
       </div>
     </section>
 
+    <script>
+      function search() {
+        buildingName = document.getElementById("buildingName").value;
+        floorNumber = document.getElementById("floorNumber").value;
+        window.location.href = "reviews.html?buildingName=" + buildingName + "&floorNumber=" + floorNumber;
+      }
+    </script>
+
+    <footer class="bg-dark mt-auto">
+      <p class="text-light text-end p-2">RMSS</p>
+    </footer>
   </body>
 </html>
