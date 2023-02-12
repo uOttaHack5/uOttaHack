@@ -131,11 +131,11 @@
                 </style>
 
               <div class="autocomplete" style= "width: 50%;">
-              <input type="search" class="form-control rounded" placeholder="Building name" aria-label="Search" aria-describedby="search-addon" id="buildingName"/>
+              <input type="search" id="buildingName" class="form-control rounded" placeholder="Building name" aria-label="Search" aria-describedby="search-addon" id="buildingName"/>
             </div>
 
             <div class="autocomplete" style= "width: 50%;">
-              <input type="search" class="form-control rounded" placeholder="Floor number" aria-label="Search" aria-describedby="search-addon" id = "floorNumber"/>
+              <input type="search" id="floorNumber" class="form-control rounded" placeholder="Floor Number" aria-label="Search" aria-describedby="search-addon" id = "floorNumber"/>
             </div>
 
             <p>
@@ -147,8 +147,7 @@
     
 
             <p class="text-center">
-              <a href="reviews.html" class="btn btn-danger rounded-pill" style="background-color:darkred;">Search
-              </a>
+              <button onclick="search()" class="btn btn-danger rounded-pill" style="background-color:darkred;">Search</button>
             </p>
             <h6 class="text-center">
               Use our amazing search website to find your perfect study location in University of Ottawa rated by your peers!</h6>
@@ -269,10 +268,20 @@
         });
       }
   
-      var buildings = ["CRX", "FSS", "Morisset", "Fauteux", "UCU", "Marion Hall", "l'Amoureux"];
-      var floors = ["0", "1", "2", "3", "4", "5", "6"];
+      buildings = ["CRX", "FSS", "MRT", "FTX", "UCU", "MRN", "LMX"];
+      floors = ["0", "1", "2", "3", "4", "5", "6"];
       autocomplete(document.getElementById("buildingName"), buildings);
       autocomplete(document.getElementById("floorNumber"), floors);
+
+      function search() {
+          buildingName = document.getElementById("buildingName").value;
+          floorNumber = document.getElementById("floorNumber").value;
+          if(buildingName in buildings && floorNumber in floors){
+            window.location.href = "reviews.html?buildingName=" + buildingName + "&floorNumber=" + floorNumber;
+          } else {
+            alert("Please enter building within CRX, FSS, MRT, FTX, UCU, MRN, LMX and floor within 0, 1, 2, 3, 4, 5, 6");
+          }
+      }
       </script>
 
   </body>
