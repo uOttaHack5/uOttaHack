@@ -61,8 +61,7 @@
         <div class="row" >
             <h3 class="text-center fw-bold">Let's get started!<br>Enter the building name and floor number</h3>
            
-            <form id="reviewDetails" autocomplete="off" action="/action_page.php"></form>
-            <div class="autocomplete" style= "width: 50%;">
+            <form id="reviewDetails" autocomplete="off" action="/action_page.php">
 
               <style>
                 * {
@@ -103,6 +102,7 @@
                   border-bottom: none;
                   border-top: none;
                   z-index: 99;
+                  color:black;
                   /*position the autocomplete items to be the same width as the container:*/
                   top: 100%;
                   left: 0;
@@ -128,9 +128,13 @@
                 }
                 </style>
 
-
+              <div class="autocomplete" style= "width: 50%;">
               <input type="search" class="form-control rounded" placeholder="Building name" aria-label="Search" aria-describedby="search-addon" id="buildingName"/>
+            </div>
+
+            <div class="autocomplete" style= "width: 50%;">
               <input type="search" class="form-control rounded" placeholder="Floor Number" aria-label="Search" aria-describedby="search-addon" id = "floorNumber"/>
+            </div>
             </div>
           </form>
             <p class="text-center">
