@@ -93,7 +93,7 @@
             
             .autocomplete-items {
               position: absolute;
-              border: 1px solid #d4d4d48e;
+              border: 1px solid #d4d4d4;
               border-bottom: none;
               border-top: none;
               z-index: 99;
@@ -124,12 +124,14 @@
         
       
           <div class="row">
-            <div class="autocomplete" style="width:350px;">
+            <div class="autocomplete" style= "width: 50%;">
               <label for="buildingName">Building Name</label>
-              <input id="buildingName" type="text" name="myBuilding" placeholder="Enter the Building Name">
+              <input id="buildingName" class="form-control"type="text" name="myBuilding" placeholder="Enter the Building Name">
             </div>
+            
+          </br>
 
-            <div class="col-md-6 ">
+            <div class="autocomplete" style= "width: 50%;">
               <label for="floorNumber">Floor Number</label>
               <input type="text" class="form-control" id="floorNumber" placeholder="Enter the Floor Number">
             </div>
@@ -269,7 +271,9 @@
           }
       
           var buildings = ["CRX", "FSS", "Morisset", "Fauteux", "UCU", "Marion Hall", "l'Amoureux"];
+          var floors = ["0", "1", "2", "3", "4", "5", "6"];
           autocomplete(document.getElementById("buildingName"), buildings);
+          autocomplete(document.getElementById("floorNumber"), floors);
           </script>
         
         
