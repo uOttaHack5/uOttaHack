@@ -14,6 +14,12 @@
    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
+
+  <script>
+    function addReview(){
+      window.location.href = "addreview.html?buildingName=" + buildingName + "&floorNumber=" + floorNumber;
+    }
+  </script>
   
   <script>
     function populateReviews(data){
@@ -57,8 +63,8 @@
     const lambdaUrl = "https://xvkdtgmvcczg4pescx2a5qjol40kfjwk.lambda-url.us-east-1.on.aws/";
     $(async function(){
       const currentUrl = new URL(window.location.toLocaleString());
-      const buildingName = currentUrl.searchParams.get('buildingName');
-      const floorNumber = currentUrl.searchParams.get('floorNumber');
+      buildingName = currentUrl.searchParams.get('buildingName');
+      floorNumber = currentUrl.searchParams.get('floorNumber');
 
       $('#studySpotName').text(buildingName + " Floor " + floorNumber);
 
@@ -160,7 +166,7 @@
 
           <!--Add review button-->
           <p class="text-center pb-2 m-1">
-          <a href="addreview.html" class="btn m-5" style="background-color: darkred; color:white;">Add a review</a>
+          <a onclick="addReview()" class="btn m-5" style="background-color: darkred; color:white;">Add a review</a>
             
           <!--Add more info button-->
           <a href="#" class="btn m-5" style="background-color: darkred; color:white;" data-bs-toggle="modal" data-bs-target="#exampleModal">More information</a>
