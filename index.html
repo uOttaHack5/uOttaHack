@@ -274,9 +274,9 @@
       autocomplete(document.getElementById("floorNumber"), floors);
 
       function search() {
-          buildingName = document.getElementById("buildingName").value;
-          floorNumber = document.getElementById("floorNumber").value;
-          if(buildingName in buildings && floorNumber in floors){
+          buildingName = document.getElementById("buildingName").value.toUpperCase();
+          floorNumber = document.getElementById("floorNumber").value.toUpperCase();
+          if(buildings.includes(buildingName) && floors.includes(floorNumber)){
             window.location.href = "reviews.html?buildingName=" + buildingName + "&floorNumber=" + floorNumber;
           } else {
             alert("Please enter building within CRX, FSS, MRT, FTX, UCU, MRN, LMX and floor within 0, 1, 2, 3, 4, 5, 6");
